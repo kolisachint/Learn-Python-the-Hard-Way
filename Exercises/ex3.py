@@ -26,7 +26,8 @@ print("Is it greater ?",5> -2)
 print("Is it greater or equal to ?", 5>=-2)
 print("Is is less than or equal to ?", 5 <= -2)
 
-# Python3 does automatic floating point conversion when it sees /
+# Python3 does automatic floating point conversion when it sees /  
+# Result will be float if any variable is float used in the calculation
 print("Difference between 7/4 & 7.0/4.0 :",7/4 , 7.0/4.0 )
 print("Difference between 7*4 & 7.0*4.0 :",7*4 , 7.0*4.0 )
 print("Difference between 7**4 & 7.0**4.0 :",7**4,7.0**4.0 )
