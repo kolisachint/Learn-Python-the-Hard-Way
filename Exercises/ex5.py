@@ -2,7 +2,6 @@
 # _*_ coding: utf-8 _*_
 # More Variables and Printing
 
-# Python understands signed integer values
 
 my_name = 'Zed A. Shaw'
 my_age = +35 # not a lie
@@ -38,3 +37,10 @@ print("99 can be printed like this : %(num)+21f  " %{"num":99} )
 print("99 can be printed like this : %(num)10g  " %{"num":99.01} ) 
 print("99 can be printed like this : %(num)+21g  " %{"num":999999999999999999999.01} ) 
 print("99 can be printed like this : %(num)+21g  " %{"num":999999} ) 
+
+#print(num)
+#
+#Traceback (most recent call last):
+#  File "ex5.py", line 42, in <module>
+#    print(num)
+#NameError: name 'num' is not defined
