@@ -1,3 +1,7 @@
+#!/usr/local/bin/python3
+# _*_ coding: utf-8 _*_
+# Comments and Pound Characters and Docstrings
+
 # A comment, this is so you can read it later
 # Anything after # this is ignored by python
 
