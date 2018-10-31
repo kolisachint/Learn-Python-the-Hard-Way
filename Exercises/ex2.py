@@ -1,6 +1,6 @@
-#!/usr/local/bin/python3
+#!/usr/local/bin/python
 # _*_ coding: utf-8 _*_
-# Comments and Pound Characters and Docstrings
+# Comments , Pound Characters and Docstrings
 
 # A comment, this is so you can read it later
 # Anything after # this is ignored by python
@@ -14,7 +14,8 @@ print("This will run.")
 
 print("""
 This will still run with #.
-# is considered character when used in code, and when not used as first character of line.
+# is considered character when used in code.
+This is multiline print statement used with \"\"\" or ''' inside print function
 """)
 
 """
