@@ -42,6 +42,16 @@ print("99 can be printed like this : %(num)10g  " %{"num":99.01} )
 print("99 can be printed like this : %(num)+21g  " %{"num":999999999999999999999.01} ) 
 print("99 can be printed like this : %(num)+21g  " %{"num":999999} ) 
 
+s="       sachin        "
+print("Characters can be formatted as 'sachin' ", s)
+print("Characters can be formatted as 'sachin' ", s.ljust(30))
+print("Characters can be formatted as 'sachin' ", s.rjust(30))
+print("Characters can be formatted as 'sachin' ", s.ljust(30,'X'))
+print("Characters can be formatted as 'sachin' ", s.rjust(30,'X'))
+print("Characters can be formatted as 'sachin' ", s.strip())
+print("Characters can be formatted as 'sachin' ", s.lstrip())
+print("Characters can be formatted as 'sachin' ", s.rstrip())
+
 #print(num)
 #
 #Traceback (most recent call last):
