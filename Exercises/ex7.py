@@ -27,5 +27,8 @@ print(end1, end2, end3, end4, end5, end6)
 
 print(end7 + " " + end8 + " " + end9 + " " + end10 + " " + end11 + " " + end12)
 
+print("sa" + "chin", "is", 5 + 25, "years",
+      "old. {0}".format("Multiple formatting do works."))
+
 print("Reverse order {5} {4} {3} {2} {1} {0} "
       .format(end7, end8, end9, end10, end11, end12))
