@@ -26,14 +26,18 @@ my_age, my_height, my_weight, my_age + my_height + my_weight))
 print("99 can be printed like this : %s  " % 99 ) 
 print("99 can be printed like this : %(num)+10r  " %{"num":99} ) 
 print("99 can be printed like this : %(num)+10s  " %{"num":99} ) 
+
 print("99 can be printed like this : %(num)010d  " %{"num":99} ) 
 print("99 can be printed like this : %(num)10d  " %{"num":99} ) 
 print("99 can be printed like this : %(num)-10d  " %{"num":99} ) 
 print("99 can be printed like this : %(num)+10d  " %{"num":99} ) 
+
 print("99 can be printed like this : %(num)+10e  " %{"num":99} ) 
+
 print("99 can be printed like this : %(num)021f  " %{"num":99} ) 
 print("99 can be printed like this : %(num)-21f  " %{"num":99} ) 
 print("99 can be printed like this : %(num)+21f  " %{"num":99} ) 
+
 print("99 can be printed like this : %(num)10g  " %{"num":99.01} ) 
 print("99 can be printed like this : %(num)+21g  " %{"num":999999999999999999999.01} ) 
 print("99 can be printed like this : %(num)+21g  " %{"num":999999} ) 
