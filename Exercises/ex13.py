@@ -1,6 +1,7 @@
 #!/usr/local/bin/python
 # _*_ coding: utf-8 _*_
 # Parameters, Unpacking, Variables
+# Usage: python3 ex13.py 1 2 3
 
 from sys import argv
 

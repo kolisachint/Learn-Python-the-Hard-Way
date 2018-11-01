@@ -1,7 +1,7 @@
 #!/usr/local/bin/python
 # _*_ coding: utf-8 _*_
 # Prompting and Passing
-
+# Usage: python3 ex14.py sachin
 
 from sys import argv
 
