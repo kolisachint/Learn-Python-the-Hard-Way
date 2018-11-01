@@ -14,15 +14,16 @@ print("If you do want that, hit RETURN.")
 input("?")
 
 print("Opening file.....")
-target= open(filename,'r+')
+target= open(filename,'r')
 
 print("Reading file.....")
 print(target.read())
 
+target.seek(15,0)             # seek only works with r, w, r+, w+ And not in a, a+ mode
+print(target.read())
+
 print("Truncating file.....")
 target.truncate()             # Truncate is never required for any mode
-
-target.seek(15,0)             # seek only works with w, r+, w+ And not in r, a, a+ mode
 
 print("Now I am going to ask you for three lines->")
 line1= input("Line1:")
@@ -42,8 +43,8 @@ target.close()
 
 
 # r mode won't allow you write or append a file
-# w mode won't allow you to read or append a file
-# a mode won't allow you to read or truncate a file
+# w mode won't allow you to read [ For appending use seek ]
+# a mode won't allow you to read or write a file from start [ Except append ]
 
 
 # Traceback (most recent call last):
