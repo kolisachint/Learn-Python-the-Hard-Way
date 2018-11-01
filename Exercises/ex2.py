@@ -15,7 +15,7 @@ print("This will run.")
 print("""
 This will still run with #.
 # is considered character when used in code.
-This is multiline print statement used with \"\"\" or ''' inside print function
+This is A multiline string literal used with \"\"\" or ''' inside print function
 """)
 
 """
