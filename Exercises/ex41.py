@@ -45,25 +45,27 @@ def convert(snippet, phrase):
 		param_count = random.randint(1,3)
 		param_names.append(', '.join(random.sample(WORDS, param_count)))
 	
-	for sentence in snippet, phrase:
-		result = sentence[:]
- 
-	results.append(result)
-	
+	question = snippet
+	answer = phrase	
+  
 	# fake class names
 	for word in class_names:
-		result = result.replace("%%%", word, 1)
+		question = question.replace("%%%", word, 1)
+		answer = answer.replace("%%%", word, 1)
 	
 	# fake other names
 	for word in other_names:
-		result = result.replace("***", word, 1)
+		question = question.replace("***", word, 1)
+		answer = answer.replace("***", word, 1)
 	
 	# fake parameter lists
 	for word in param_names:
-		result = result.replace("@@@", word, 1)
+		question = question.replace("@@@", word, 1)
+		answer = answer.replace("@@@", word, 1)
 	
-	results.append(result)
-#	print(results[0],"\n")	
+	results.append(question)
+	results.append(answer)
+
 	return results
 
 
@@ -116,3 +118,17 @@ except EOFError:
 #     result = result.replace("%%%", word, 1)
 # TypeError: Can't convert 'bytes' object to str implicitly
 # CodeChange: WORDS.append(word.strip().decode('utf-8'))
+
+# Traceback (most recent call last):
+#   File "ex41.py", line 76, in <module>
+#     question, answer = convert(snippet, phrase)
+#   File "ex41.py", line 53, in convert
+#     result = result.replace("%%%", word, 1)
+# AttributeError: 'list' object has no attribute 'replace'
+
+# Traceback (most recent call last):
+#   File "ex41.py", line 76, in <module>
+#     question, answer = convert(snippet, phrase)
+#   File "ex41.py", line 57, in convert
+#     result = result.replace("***", word, 1)
+# AttributeError: 'tuple' object has no attribute 'replace'
