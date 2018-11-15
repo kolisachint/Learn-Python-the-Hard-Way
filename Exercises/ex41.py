@@ -47,6 +47,8 @@ def convert(snippet, phrase):
 	
 	for sentence in snippet, phrase:
 		result = sentence[:]
+ 
+	results.append(result)
 	
 	# fake class names
 	for word in class_names:
@@ -61,7 +63,7 @@ def convert(snippet, phrase):
 		result = result.replace("@@@", word, 1)
 	
 	results.append(result)
-	print(results[0],"\n")	
+#	print(results[0],"\n")	
 	return results
 
 
