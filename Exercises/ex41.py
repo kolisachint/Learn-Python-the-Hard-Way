@@ -31,7 +31,7 @@ if len(sys.argv) == 2 and sys.argv[1] == "english":
 
 # load up the words from the website
 for word in urlopen(WORD_URL).readlines():
-	WORDS.append(word.strip())
+	WORDS.append(word.strip().decode('utf-8'))
 
 
 def convert(snippet, phrase):
@@ -63,16 +63,18 @@ def convert(snippet, phrase):
 	results.append(result)
 		
 	return results
-	
+
 
 # keep going until they hit CTRL- D
 try:
 	while True:
 		snippets = list(PHRASES.keys())
 		random.shuffle(snippets)
-		
+
 		for snippet in snippets:
 			phrase = PHRASES[snippet]
+			print(snippet,"\n")
+			print(phrase)
 			question, answer = convert(snippet, phrase)
 			if PHRASE_FIRST:
 				question, answer = answer, question
@@ -104,6 +106,7 @@ except EOFError:
 #  File "/usr/lib/python3.5/random.py", line 272, in shuffle
 #    x[i], x[j] = x[j], x[i]
 #TypeError: 'dict_keys' object does not support indexing. -> Use list(d.keys())
+# Code Change -> snippets = list(PHRASES.keys())
 
 # cabox@Learn-Python-the-Hard-Way:~/workspace/Exercises$ python3 ex41.py
 # Traceback (most recent call last):
@@ -112,3 +115,4 @@ except EOFError:
 #   File "ex41.py", line 53, in convert
 #     result = result.replace("%%%", word, 1)
 # TypeError: Can't convert 'bytes' object to str implicitly
+# CodeChange: WORDS.append(word.strip().decode('utf-8'))
