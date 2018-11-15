@@ -36,7 +36,7 @@ for word in urlopen(WORD_URL).readlines():
 
 def convert(snippet, phrase):
 	class_names = [w.capitalize() for w in
-	random.sample(WORDS, snippet.count("%%%"))]
+								random.sample(WORDS, snippet.count("%%%"))]
 	other_names = random.sample(WORDS, snippet.count("***"))
 	results = []
 	param_names = []
@@ -61,7 +61,7 @@ def convert(snippet, phrase):
 		result = result.replace("@@@", word, 1)
 	
 	results.append(result)
-		
+	print(results[0],"\n")	
 	return results
 
 
@@ -73,8 +73,6 @@ try:
 
 		for snippet in snippets:
 			phrase = PHRASES[snippet]
-			print(snippet,"\n")
-			print(phrase)
 			question, answer = convert(snippet, phrase)
 			if PHRASE_FIRST:
 				question, answer = answer, question
