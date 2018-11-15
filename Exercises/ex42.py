@@ -5,14 +5,15 @@
 
 ## Animal is- a object (yes, sort of confusing) look at the extra credit
 class Animal(object):
-	pass
+	typename="Animal"
 
-## ??
-class Dog(Animal):
+## Dog is-a Animal
+class Dog(Animal):            # Inheritance
 
-	def __init__(self, name):
-		## ??
+	def __init__(self, name):   # Object Initialisation
+		## Dog has- a its own attributes as well as has- a animal attributes
 		self.name = name
+		self.type = "Dog"
 
 ## ??
 class Cat(Animal):
@@ -55,7 +56,7 @@ class Halibut(Fish):
 
 ## rover is- a Dog
 rover = Dog("Rover")
-
+print("%s is- a %s & %s is- a %s" % (rover.name,rover.type,rover.type,rover.typename))
 ## ??
 satan = Cat("Satan")
 
