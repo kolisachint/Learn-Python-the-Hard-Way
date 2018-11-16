@@ -59,7 +59,7 @@ class Salmon(Fish):
 
 ## Halibut is- a Fish
 class Halibut(Fish):
-    myparentname = Fish.whoami           # Overriding super class's static variable # Evil
+    myparentname = Fish.whoami           # Using super class's static variable # Evil
     whoami = "Halibut"
 
 
